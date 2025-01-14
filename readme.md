@@ -1,1 +1,5 @@
-Instalación Odoo Comunity v17
+# Instalación Odoo Community v.17
+
+## Creación del compose
+
+
