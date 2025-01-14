@@ -1,6 +1,6 @@
 # Instalación Odoo Community v.17
 
-[placeholder]
+En esta guia se muestran los pasos a seguir para intalar tres servicios: Odoo, PostgreSQL y PgAdmin
 
 ## Creación del archivo compose
 
