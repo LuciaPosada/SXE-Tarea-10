@@ -51,9 +51,21 @@ docker compose up
  <summary>Odoo</summary>
 <br>
 
+Acedemos a nuestra instalación de Odoo mediante:
+
 ```bash
-[placeholder]
+http://<ip>:<puerto_odoo>
 ```
+> La página resultante deberia ser las siguiente ↓
+
+![Odoo_Incio](/img/Odoo1.png)
+
+Una vez introducidos los datos de la BD y otra información pertinente habremos terminado nuestra instalación de Odoo
+
+> Servicio en funcionamiento ↓
+>
+> ![Odoo_Incio](/img/Odoo2.png)
+
 ---
 </details>
 
