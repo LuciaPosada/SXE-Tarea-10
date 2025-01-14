@@ -57,14 +57,42 @@ Acedemos a nuestra instalación de Odoo mediante:
 http://<ip>:<puerto_odoo>
 ```
 > La página resultante deberia ser las siguiente ↓
-
-![Odoo_Incio](/img/Odoo1.png)
+>
+> ![Odoo_Incio](/img/Odoo1.png)
 
 Una vez introducidos los datos de la BD y otra información pertinente habremos terminado nuestra instalación de Odoo
 
 > Servicio en funcionamiento ↓
 >
-> ![Odoo_Incio](/img/Odoo2.png)
+> ![Odoo_Pagina](/img/Odoo2.png)
+
+---
+</details>
+
+<details>
+ <summary>PgAdmin</summary>
+<br>
+
+Acedemos a nuestra instalación de PgAdmin mediante:
+
+```bash
+http://<ip>:<puerto_pgadmin>
+```
+> La página resultante deberia ser las siguiente ↓
+>
+> ![PgAdmin_Incio](/img/PgAdmin1.png)
+
+Una vez introducidos los datos que especificamos en el archivo compose.yml tendremos acesso a la pagina principal de nuestra sesion, aqui podemos conectar nuestro servidor con los datos de odoo pulsando el la opcion: registar servidor.
+
+> Formulario de servidor ↓
+>
+> ![PgAdmin_Servidor](/img/PgAdmin2.png)
+
+Tras connectar correctamente la BD con el PgAdmin podremos visualizar los datos de Odoo desde la pagina.
+
+> Servidor connectado ↓
+>
+> ![PgAdmin_Odoo](/img/PgAdmin3.png)
 
 ---
 </details>
