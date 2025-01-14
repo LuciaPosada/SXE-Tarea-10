@@ -32,6 +32,9 @@ services:
       PGADMIN_DEFAULT_PASSWORD: admin
     depends_on:
       - db
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
 
 volumes:
   odoo-db-data:
+  pgadmin-data:
