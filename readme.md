@@ -21,4 +21,39 @@ nano docker-compose.yml
 ---
 </details>
 
+<details>
+ <summary>Contenido del archivo</summary>
+<br>
+
+```bash
+[placeholder]
+```
+---
+</details>
+
+<details>
+ <summary>Puesta en funcionamiento</summary>
+<br>
+
+```bash
+# Ejecución en segundo plano (deja libre la terminal)
+docker compose up -d
+
+# Ejecución en primer plano  (muestra el log de los contenedores)
+docker compose up 
+```
+---
+</details>
+
+## Acceso e instalación a los servicios
+
+<details>
+ <summary>Odoo</summary>
+<br>
+
+```bash
+[placeholder]
+```
+---
+</details>
 
