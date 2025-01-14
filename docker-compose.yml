@@ -1,0 +1,37 @@
+services:
+  odoo:
+    image: odoo:17.0
+    depends_on:
+      - db
+    restart: unless-stopped
+    ports:
+      - "8055:8069"
+    environment:
+      HOST: db
+      USER: admin
+      PASSWORD: pswd
+
+  db:
+    image: postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_PASSWORD: pswd
+      POSTGRES_USER: admin
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - odoo-db-data:/var/lib/postgresql/data/pgdata
+
+  pgadmin:
+    image: dpage/pgadmin4
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    depends_on:
+      - db
+
+volumes:
+  odoo-db-data:
