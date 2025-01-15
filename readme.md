@@ -82,7 +82,7 @@ http://<ip>:<puerto_pgadmin>
 >
 > ![PgAdmin_Incio](/img/PgAdmin1.png)
 
-Una vez introducidos los datos que especificamos en el archivo compose.yml tendremos acesso a la pagina principal de nuestra sesion, aqui podemos conectar nuestro servidor con los datos de odoo pulsando el la opcion: registar servidor.
+Una vez introducidos los datos que especificamos en el archivo compose.yml tendremos acesso a la pagina principal de nuestra sesion, aqui podemos conectar nuestro servidor con los datos de odoo pulsando el la opcion: agregar nuevo servidor.
 
 > Formulario de servidor ↓
 >
