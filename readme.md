@@ -146,4 +146,4 @@ Tras conectar correctamente la base de datos con pgAdmin, podremos visualizar lo
 
 Un conflicto de puertos imposibilitara la iniciación del contenedor Docker que contenga un servicio con un puerto conflictivo.
 
-Para solucionar problemas de conflictos entre puertos, la solución, es cambiar el puerto que esta utilizando uno de los servicios causantes del problema por otro distinto.
+Para solucionar problemas de conflictos entre puertos, la solución es cambiar el puerto que esta utilizando uno de los servicios causantes del problema por otro distinto.
