@@ -137,3 +137,13 @@ Tras conectar correctamente la base de datos con pgAdmin, podremos visualizar lo
 ---
 </details>
 
+# Solucionar puertos ocupados
+
+**¿Que ocurre si en el ordenador local el puerto 5432 está ocupado? ¿Y si lo estuviese el 8069? ¿Como puedes solucionarlo?**
+
+1) 5432 - Puerto predeterminado de PostgreSQL
+2) 8069 - Puerto predeterminado de Odoo para interfaz web
+
+Un conflicto de puertos imposibilitara la iniciación del contenedor Docker que contenga un servicio con un puerto conflictivo.
+
+Para solucionar problemas de conflictos entre puertos, la solución, es cambiar el puerto que esta utilizando uno de los servicios causantes del problema por otro distinto.
