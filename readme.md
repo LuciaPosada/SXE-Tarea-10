@@ -100,7 +100,7 @@ http://<ip>:<puerto_odoo>
 >
 > ![Odoo_Incio](/img/Odoo1.png)
 
-Una vez introducidos los datos de la BD y otra información pertinente habremos terminado nuestra instalación de Odoo
+Una vez introducidos los datos de la BD y otra información pertinente, habremos completado la instalación de Odoo.
 
 > Servicio en funcionamiento ↓
 >
@@ -122,13 +122,13 @@ http://<ip>:<puerto_pgadmin>
 >
 > ![PgAdmin_Incio](/img/PgAdmin1.png)
 
-Una vez introducidos los datos que especificamos en el archivo compose.yml tendremos acesso a la pagina principal de nuestra sesion, aqui podemos conectar nuestro servidor con los datos de odoo pulsando el la opcion: agregar nuevo servidor.
+Una vez introducidos los datos que especificamos en el archivo compose.yml, tendremos acceso a la página principal de nuestra sesión. Aquí podemos conectar nuestro servidor con los datos de Odoo seleccionando la opción: **Agregar nuevo servidor**.
 
 > Formulario de servidor ↓
 >
 > ![PgAdmin_Servidor](/img/PgAdmin2.png)
 
-Tras connectar correctamente la BD con el PgAdmin podremos visualizar los datos de Odoo desde la pagina.
+Tras conectar correctamente la base de datos con pgAdmin, podremos visualizar los datos de Odoo desde la página.
 
 > Servidor connectado ↓
 >
