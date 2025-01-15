@@ -26,7 +26,47 @@ nano docker-compose.yml
 <br>
 
 ```bash
-[placeholder]
+services:
+  odoo:                                    # Define el servicio Odoo
+    image: odoo:17.0                       # Especifica la imagen de Docker para Odoo, versión 17.0.
+    depends_on:                            # Asegura que el servicio de base de datos se inicie antes que el servicio Odoo
+      - db
+    restart: unless-stopped                # El contenedor se reiniciara automáticamente a menos que se detenga explícitamente
+    ports:
+      - "8055:8069"                        # Asigna el puerto predeterminado de Odoo al puerto 8055
+    environment:
+      HOST: db                             # El nombre de host para el servicio de base de datos
+      USER: admin                          # El nombre de usuario para la base de datos
+      PASSWORD: pswd                       # La contraseña para la base de datos
+
+  db:                                      # Define el servicio de base de datos PostgreSQL
+    image: postgres:latest                 # Especifica la imagen de Docker para PostgreSQL, ultima versión
+    restart: unless-stopped                # El contenedor se reiniciara automáticamente a menos que se detenga explícitamente
+    environment:                 
+      POSTGRES_DB: odoo                    # El nombre de la base de datos predeterminada
+      POSTGRES_PASSWORD: pswd              # La contraseña para el usuario de PostgreSQL
+      POSTGRES_USER: admin                 # El nombre de usuario de PostgreSQL
+      PGDATA: /var/lib/postgresql/data/pgdata      # Especifica la ruta dónde PostgreSQL almacena los datos dentro del contenedor
+    volumes:                               # Monta un volumen para conservar los datos de la base de datos
+      - odoo-db-data:/var/lib/postgresql/data/pgdata
+
+  pgadmin:                                 # Define el servicio pgAdmin
+    image: dpage/pgadmin4                  # Especifica la imagen de Docker para pgAdmin
+    restart: unless-stopped                # El contenedor se reiniciara automáticamente a menos que se detenga explícitamente
+    ports:                                 # Asigna el puerto predeterminado de interfaz web pgAdmin al puerto 8065
+      - "8065:80"      
+    environment:        
+      PGADMIN_DEFAULT_EMAIL: admin@example.com     # El correo electrónico de inicio de sesión para pgAdmin
+      PGADMIN_DEFAULT_PASSWORD: admin      # La contraseña para el usuario pgAdmin
+    depends_on:                            # Asegura que el servicio de base de datos se inicie antes que el servicio pgAdmin
+      - db
+    volumes:                               # Monta un volumen para conservar los datos de pgAdmin
+      - pgadmin-data:/var/lib/pgadmin
+
+volumes:                                   # Define los volúmenes declarados en los servicios
+  odoo-db-data:
+  pgadmin-data:
+
 ```
 ---
 </details>
@@ -70,10 +110,10 @@ Una vez introducidos los datos de la BD y otra información pertinente habremos 
 </details>
 
 <details>
- <summary>PgAdmin</summary>
+ <summary>pgAdmin</summary>
 <br>
 
-Acedemos a nuestra instalación de PgAdmin mediante:
+Acedemos a nuestra instalación de pgAdmin mediante:
 
 ```bash
 http://<ip>:<puerto_pgadmin>
